@@ -1,12 +1,4 @@
 class Solution {
-    /**
-     * This method counts the number of steps needed to reach the next number in lexicographical order.
-     * It calculates how many numbers exist in the range starting with the given prefix (curr).
-     *
-     * @param curr The current prefix being considered.
-     * @param n The maximum number limit.
-     * @return The count of numbers in the lexicographical order starting from 'curr'.
-     */
     private long countSteps(long curr, long n) {
         long steps = 0;
         long first = curr, last = curr; // First and last denote the range of numbers under the prefix.
@@ -20,14 +12,6 @@ class Solution {
         }
         return steps;
     }
-
-    /**
-     * Finds the k-th smallest number in lexicographical order from 1 to n.
-     *
-     * @param n The upper limit of numbers.
-     * @param k The k-th smallest number to find.
-     * @return The k-th smallest number in lexicographical order.
-     */
     public int findKthNumber(int n, int k) {
         long curr = 1;  // Start from prefix '1'
         k--;  // Decrement k because we are counting from 1 (1-based index)
